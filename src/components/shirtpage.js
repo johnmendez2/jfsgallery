@@ -161,11 +161,10 @@ function Shirtpage() {
             <video
             src={videoSrc}
             style={videoStyle}
-            autoPlay
             muted
             playsInline
-            loop
             webkit-playsinline>
+              <source src={videoSrc} type="video/mp4" />
             </video>
             // <video controls={false}  style={videoStyle} muted autoPlay playsInline mediaPlaybackRequiresUserAction={false}>
             //   <source src={videoSrc} type="video/mp4" />
