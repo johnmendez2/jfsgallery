@@ -1,0 +1,15 @@
+/* circularmenu.css */
+
+.slick-side img{
+  display: none; /* Hide all slides by default */
+}
+
+.slick-center .carousel-item {
+  display: block; /* Display the focused slide */
+}
+
+.carousel-image {
+  width: 20rem;
+  height: auto;
+  margin: 0 auto;
+}

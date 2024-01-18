@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fugaz+One&family=Monoton&family=Paytone+One&family=Tenor+Sans&display=swap');
+
+.shirtName {
+    font-family: 'Tenor Sans', sans-serif;
+    color: black;
+    margin-top: 0px;
+    padding-bottom: 30px;
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+.mobile-shirtName{
+    font-family: 'Tenor Sans', sans-serif;
+    color: black;
+    margin-top: 0px;
+    padding-bottom: 30px;
+    font-size: 2vw;
+}
