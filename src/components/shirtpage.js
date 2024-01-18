@@ -163,7 +163,7 @@ function Shirtpage() {
             style={videoStyle}
             autoPlay
             muted
-            playsinline
+            playsInline
             loop
             webkit-playsinline>
             </video>
