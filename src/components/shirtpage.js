@@ -137,7 +137,8 @@ function Shirtpage() {
       <div className="desktop">
         <div style={pageStyle}>
           {shirtDetails.video && (
-            <video style={videoStyle} autoPlay loop muted>
+            <video style={videoStyle} autoPlay="autoplay" playsInLine="playsinline" loop="true" muted="true">
+
               <source src={videoSrc} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
