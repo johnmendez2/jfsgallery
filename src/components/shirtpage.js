@@ -158,10 +158,14 @@ function Shirtpage() {
       <div className="mobile">
         <div style={pageStyle}>
           {shirtDetails.video && (
-            <video style={videoStyle} autoPlay loop muted playsInline webkit-playsInline>
-              <source src={videoSrc} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+        <div
+        dangerouslySetInnerHTML={{
+          __html: `<video style=${videoStyle} className="app__backgroundVideo" autoplay loop muted playsinline>
+    <source src=${videoSrc} type="video/mp4" />
+    Your browser does not support the video tag.
+</video>`,
+        }}
+      />
           )}
           <div style={overlayStyle}></div>
           <MobileWhiteNavbar />
