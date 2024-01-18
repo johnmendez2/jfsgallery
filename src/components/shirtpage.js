@@ -158,7 +158,16 @@ function Shirtpage() {
       <div className="mobile">
         <div style={pageStyle}>
           {shirtDetails.video && (
-            <video src={videoSrc} style={videoStyle} playsInline></video>
+            <video
+            src={videoSrc}
+            style={videoStyle}
+            autoPlay
+            muted
+            playsinline
+            loop
+            controls
+            webkit-playsinline>
+            </video>
             // <video controls={false}  style={videoStyle} muted autoPlay playsInline mediaPlaybackRequiresUserAction={false}>
             //   <source src={videoSrc} type="video/mp4" />
             //   Your browser does not support the video tag.
