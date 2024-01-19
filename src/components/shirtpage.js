@@ -15,7 +15,7 @@ function Shirtpage() {
   const [animationClass, setAnimationClass] = useState('');
   const [showVideo, setShowVideo] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false); // Add state for controlling carousel visibility
-  const isMobile = window.innerWidth <= 768;
+
   useEffect(() => {
     const fetchShirtDetails = async () => {
       try {
@@ -127,9 +127,6 @@ function Shirtpage() {
     opacity: animationClass === 'animate-left' ? 1 : 0,
     transition: 'visibility 0s, opacity 1s ease-out 1.5s',
   };
-
-  const videoSrc = !isMobile ? shirtDetails.video : null;
-  
   const imgarray = [shirtDetails.frameImage, ...(Array.isArray(shirtDetails.imageArray) ? shirtDetails.imageArray : [])];
 
   console.log(imgarray)
@@ -139,7 +136,7 @@ function Shirtpage() {
         <div style={pageStyle}>
           {shirtDetails.video && (
             <video style={videoStyle} autoPlay loop muted>
-              <source src={videoSrc} type="video/mp4" />
+              <source src={shirtDetails.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           )}
@@ -157,13 +154,13 @@ function Shirtpage() {
       </div>
 
       <div className="mobile">
-      {shirtDetails.video && (
-            <video controls  style={videoStyle} muted autoPlay playsInline mediaPlaybackRequiresUserAction={false}>
+        <div style={pageStyle}>
+        {shirtDetails.video && (
+            <video style={videoStyle} autoPlay loop muted playsInline>
               <source src={shirtDetails.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           )}
-        <div style={pageStyle}>
           <div style={overlayStyle}></div>
           <MobileWhiteNavbar />
           <div style={contentnoanimation}>
