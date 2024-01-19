@@ -128,7 +128,7 @@ function Shirtpage() {
     transition: 'visibility 0s, opacity 1s ease-out 1.5s',
   };
 
-  const videoSrc = shirtDetails.video
+  const videoSrc = !isMobile ? shirtDetails.video : null;
   
   const imgarray = [shirtDetails.frameImage, ...(Array.isArray(shirtDetails.imageArray) ? shirtDetails.imageArray : [])];
 
