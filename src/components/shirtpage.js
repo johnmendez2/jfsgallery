@@ -15,7 +15,7 @@ function Shirtpage() {
   const [animationClass, setAnimationClass] = useState('');
   const [showVideo, setShowVideo] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false); // Add state for controlling carousel visibility
-
+  const isMobile = window.innerWidth <= 768;
   useEffect(() => {
     const fetchShirtDetails = async () => {
       try {
@@ -129,6 +129,7 @@ function Shirtpage() {
   };
 
   const videoSrc = shirtDetails.video
+  
   const imgarray = [shirtDetails.frameImage, ...(Array.isArray(shirtDetails.imageArray) ? shirtDetails.imageArray : [])];
 
   console.log(imgarray)
@@ -157,22 +158,6 @@ function Shirtpage() {
 
       <div className="mobile">
         <div style={pageStyle}>
-          {shirtDetails.video && (
-            <video
-            src={videoSrc}
-            style={videoStyle}
-            muted
-            playsInline
-            autoPlay
-            preload="true"
-            webkit-playsinline>
-              <source src={videoSrc} type="video/mp4" />
-            </video>
-            // <video controls={false}  style={videoStyle} muted autoPlay playsInline mediaPlaybackRequiresUserAction={false}>
-            //   <source src={videoSrc} type="video/mp4" />
-            //   Your browser does not support the video tag.
-            // </video>
-          )}
           <div style={overlayStyle}></div>
           <MobileWhiteNavbar />
           <div style={contentnoanimation}>
