@@ -24,7 +24,7 @@ function Shirtpage() {
         if (doc.exists) {
           const data = doc.data();
           const fieldsToFetch = isMobile
-            ? ['frameImage', 'imageArray', 'shirtname', 'description', 'price']
+            ? ['frameImage', 'imageArray', 'shirtname', 'description', 'price' ,'video']
             : ['frameImage', 'imageArray', 'shirtname', 'description', 'price', 'video'];
   
           // Filter the data to include only the specified fields
@@ -170,7 +170,18 @@ function Shirtpage() {
 
       <div className="mobile">
         <div style={pageStyle}>
-
+        {shirtDetails.video && (
+                  <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={videoStyle}
+                >
+                  <source src={shirtDetails.video} type="video/mp4" />
+                  {/* Add additional fallback formats if necessary */}
+                </video>
+        )}
           <div style={overlayStyle}></div>
           <MobileWhiteNavbar />
           <div style={contentnoanimation}>
