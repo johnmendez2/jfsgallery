@@ -15,14 +15,28 @@ function Shirtpage() {
   const [animationClass, setAnimationClass] = useState('');
   const [showVideo, setShowVideo] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false); // Add state for controlling carousel visibility
-
+  const isMobile = window.innerWidth <= 768;
   useEffect(() => {
     const fetchShirtDetails = async () => {
       try {
         const doc = await fs.collection('JFSGallery').doc(id).get();
+  
         if (doc.exists) {
-          setShirtDetails(doc.data());
-          console.log(doc.data())
+          const data = doc.data();
+          const fieldsToFetch = isMobile
+            ? ['frameImage', 'imageArray', 'shirtname', 'description', 'price']
+            : ['frameImage', 'imageArray', 'shirtname', 'description', 'price', 'video'];
+  
+          // Filter the data to include only the specified fields
+          const filteredData = Object.keys(data)
+            .filter(key => fieldsToFetch.includes(key))
+            .reduce((obj, key) => {
+              obj[key] = data[key];
+              return obj;
+            }, {});
+  
+          setShirtDetails(filteredData);
+          console.log(filteredData);
         } else {
           console.error(`No document with id ${id} found`);
         }
@@ -30,9 +44,10 @@ function Shirtpage() {
         console.error('Error fetching shirt details:', error);
       }
     };
-
+  
     fetchShirtDetails();
-  }, [id]);
+  }, [id, isMobile]);
+  
 
   useEffect(() => {
     // Add a small delay before applying the animation class
@@ -155,6 +170,7 @@ function Shirtpage() {
 
       <div className="mobile">
         <div style={pageStyle}>
+
           <div style={overlayStyle}></div>
           <MobileWhiteNavbar />
           <div style={contentnoanimation}>
