@@ -8,6 +8,7 @@
     align-items: center;
     color: white;
     font-size: 2em;
+    overflow-y: hidden;
   }
 
 .shadow{
