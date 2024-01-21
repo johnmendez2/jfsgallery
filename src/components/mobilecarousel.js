@@ -81,7 +81,7 @@ const MobileImageCarousel = ({ shirts }) => {
   
 
   return (
-    <div style={{ width: '100%', margin: 'auto', textAlign: 'center', position: 'relative', paddingTop: '5.5rem' }}>
+    <div style={{ width: '100%', margin: 'auto', textAlign: 'center', position: 'relative', paddingTop: '5.5rem', overflowY:'hidden' }}>
       <Slider {...sliderSettings}>
         {shirts.map((shirt, i) => (
           <div key={i} onClick={() => navigate(`/id/${shirt.id}`)}>

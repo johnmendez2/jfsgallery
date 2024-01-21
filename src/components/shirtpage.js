@@ -3,9 +3,7 @@ import Equalcarousel from "./equalcarousel";
 import backgroundImg from "../assets/whitewall.png"; // Replace with the correct path
 import Navbar from "./navbar";
 import '../styles/shirtpage.css';
-import shirtsArray from "./shirtsArray";
 import MobileEqualcarousel from "./mobileequalcarousel"
-import MobileNavbar from "./mobilenavbar";
 import MobileWhiteNavbar from "./mobilewhitenavbar";
 import { useParams } from "react-router-dom";
 import { fs } from './Config/config';
@@ -86,6 +84,7 @@ function Shirtpage() {
     backgroundSize: 'cover',
     position: 'relative',
   };
+
 
   const videoStyle = {
     width: '100%',

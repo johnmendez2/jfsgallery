@@ -5,7 +5,7 @@ import jfslogo from '../assets/jfs.png';
 import jfslogoblack from '../assets/jfsblack.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import { faInstagram as fabInstagram } from '@fortawesome/free-brands-svg-icons';
 function MobileWhiteNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -24,6 +24,9 @@ function MobileWhiteNavbar() {
         <a href="/">Home</a>
         <a href="/collection">Collection</a>
         <a href="https://instagram.com/johnsfootballshirts">Socials</a>
+        <div className='igicon' onClick={() => window.location.href = "https://instagram.com/johnsfootballshirts"}>
+          <FontAwesomeIcon icon={fabInstagram} color={menuOpen ? 'black' : 'white'} fontSize={'6vh'} />
+        </div>
       </div>
 
       <div className="close-icon" onClick={handleMenuClick} style={{top:'25px'}}>
