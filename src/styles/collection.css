@@ -1,0 +1,360 @@
+/* Collection.css */
+
+.titlejsy {
+    font-size: 1.2vw;
+    font-family: 'Playfair Display';
+    margin: 0 auto; /* Center the element by setting left and right margins to auto */
+    max-width: 70%; /* Limit the maximum width to 80% of the parent container */
+    text-align: center; /* Align the text to the center */
+  }
+  
+  .price {
+    font-size: 1vw;
+    font-family: 'Raleway';
+    padding-bottom: 10px;
+  }
+  
+  .search-and-grid-container {
+    position: absolute; /* Position the container absolutely */
+    top: 20%; /* Position it below the navbar */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; /* Adjust the margin between search bar and grid as needed */
+    width: 75vw; /* Match the width of the input */
+  }
+  
+  .search-bar-container input {
+    flex: 1; /* Take up remaining available space */
+    height: 1.5vw;
+    padding: 0.5vw; /* Adjust the padding as needed */
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  .search-bar-container button {
+    background: none; /* Remove the background */
+    border: none; /* Remove the border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    color: #555; /* Set the icon color */
+  }
+  
+  .shirts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px; /* Increase the gap for more spacing between pictures */
+    width: 75vw;
+  }
+  
+  .shirt-item {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .shirt-item img {
+    max-width: 100%;
+    max-height: 26vw;
+    object-fit: cover;
+    padding-bottom: 30px;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .pagenumber{
+    font-size: 1.6rem;
+  }
+  .pagination button {
+    background: none; /* Remove the background */
+    border: none; /* Remove the border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: #555; /* Set the icon color */
+    margin: 0 3px; /* Add margin between the buttons */
+    padding-top: 0.5rem;
+  }
+
+  .desktop.blurred::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    backdrop-filter: blur(5px); /* Add the blur effect */
+    z-index: 998; /* Ensure the background is below the popup */
+  }
+  
+  .filter-popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darken the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .filter-popup {
+    background: #f0f0f0; /* Light background color */
+    border-radius: 10px;
+    padding: 10vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Neumorphic shadow */
+    max-width: 20vw;
+    width: 100%;
+  }
+
+  .filterheading{
+    position: relative;
+    top: -10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  .neumorphic-slider {
+    margin-bottom: 20px;
+  }
+  
+  .neumorphic-slider label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .neumorphic-slider input {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3; /* Lighter background color */
+    outline: none;
+  }
+  
+  .neumorphic-slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000000; /* Slider thumb color */
+    cursor: pointer;
+  }
+  
+  .slider-values {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .neumorphic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .neumorphic-buttons label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .neumorphic-buttons button {
+    background: #d3d3d3; /* Lighter background color */
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .neumorphic-buttons button.active {
+    background: #000000; /* Active button color */
+    color: white;
+  }
+  
+  .filter-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .apply-filters-button {
+    margin-top: 20px;
+    width: 7vw;
+    height: 2vw;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+
+  @media only screen and (max-width: 768px) {
+    /* Mobile styles */
+    .mobile-titlejsy {
+        font-size: 1.2rem;
+        font-family: 'Playfair Display';
+        margin: 0 auto; /* Center the element by setting left and right margins to auto */
+        max-width: 80%; /* Limit the maximum width to 80% of the parent container */
+        text-align: center; /* Align the text to the center */
+      }
+      .search-and-grid-container {
+        position: absolute; /* Position the container absolutely */
+        top: 10%; /* Position it below the navbar */
+        padding-top: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .mobile-price {
+        font-size: 1.2rem;
+        font-family: 'Raleway';
+        padding-bottom: 10px;
+      }
+    .shirts-grid {
+      grid-template-columns: 1fr; /* Display one item per row on mobile */
+    }
+  
+    .pagination {
+      display: none; /* Hide pagination on mobile */
+    }
+  
+    /* Additional styles for mobile layout if needed */
+    .mobile-shirt-item {
+      /* Add styles for the mobile version of shirt items */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .mobile-image{
+        width: auto;
+        height: 80vw;
+    }
+
+    .mobile-search-bar-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px; /* Adjust the margin between search bar and grid as needed */
+        width: 75vw; /* Match the width of the input */
+      }
+      
+      .mobile-search-bar-container input {
+        flex: 1; /* Take up remaining available space */
+        height: 1rem;
+        padding: 0.5rem; /* Adjust the padding as needed */
+        margin-right: 10px;
+        font-size: 1rem;
+      }
+      .mobile-search-bar-container button {
+        background: none; /* Remove the background */
+        border: none; /* Remove the border */
+        cursor: pointer; /* Add a pointer cursor on hover */
+        font-size: 1.5rem; /* Adjust the font size as needed */
+        color: #555; /* Set the icon color */
+      }
+      /* Mobile Filter Popup Container */
+.mobile{
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+
+}
+.mobile-filter-popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Adjust z-index to make sure it's above other content */
+  }
+  
+  /* Mobile Filter Popup */
+  .mobile-filter-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    top:10vh;
+    position: absolute;
+  }
+  
+  /* Mobile Close Button */
+  .mobile-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  /* Mobile Button Container */
+  .mobile-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Mobile Apply Filters and Reset Filters Buttons */
+  .mobile-apply-filters-button {
+    width: 48%; /* Adjust the width as needed, leaving some space between buttons */
+    height: 40px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  }
+  
+  /* Add more styles as needed */
+  

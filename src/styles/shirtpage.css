@@ -1,0 +1,15 @@
+.shirtname{
+    font-size: 1.9vw;
+    font-family: 'Playfair Display';
+}
+
+.shirtprice{
+    font-size: 1.6vw;
+    font-family: 'Raleway';
+}   
+
+.shirtdesc{
+    font-size: 1.2vw;
+    font-family: 'Raleway';
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap')

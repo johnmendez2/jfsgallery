@@ -1,0 +1,50 @@
+/* Slide.css */
+.slide {
+    height: 100vh; /* Take up the whole viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    overflow-y: hidden;
+  }
+
+.shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex; /* Make the navbar a flex container */
+  height: 150px;
+  align-items: center; /* Center items vertically in the flex container */
+  z-index: 0;
+}
+
+/* styles/slide.css */
+/* Common styles for both mobile and desktop versions */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}
+
+  

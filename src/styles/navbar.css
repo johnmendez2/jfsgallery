@@ -1,0 +1,76 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex; /* Make the navbar a flex container */
+  align-items: center; /* Center items vertically in the flex container */
+  z-index: 1000;
+}
+
+.logo {
+  width: 17rem;
+  height: auto;
+  margin-right: auto; /* Push the logo to the left by taking up all available space */
+  padding: 20px;
+}
+
+.nav-options {
+  display: flex;
+  margin-left: auto; /* Push the nav options to the right by taking up all available space */
+  margin-right: 60px;
+  font-size: 1.2rem;
+}
+
+.nav-options a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  position: relative; /* Add relative positioning to establish a containing block */
+}
+
+.nav-options a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-options a:hover::before {
+  width: 100%;
+}
+
+
+.nav-options-dark {
+  display: flex;
+  margin-left: auto; /* Push the nav options to the right by taking up all available space */
+  margin-right: 60px;
+  font-size: 1.2rem;
+}
+
+.nav-options-dark a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 1.2rem;
+  position: relative; /* Add relative positioning to establish a containing block */
+}
+
+.nav-options-dark a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-options-dark a:hover::before {
+  width: 100%;
+}
