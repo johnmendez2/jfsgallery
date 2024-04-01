@@ -28,6 +28,7 @@ function MobileNavbar({ whiteBackground }) {
     </a>
         <a href="/">Home</a>
         <a href="/collection">Collection</a>
+        <a href="https://www.depop.com/johnsfootballshirts/">Shop</a>
         <a href="https://instagram.com/johnsfootballshirts" target="_blank" rel="noopener noreferrer">
           Socials
         </a>

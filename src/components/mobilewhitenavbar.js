@@ -23,6 +23,7 @@ function MobileWhiteNavbar() {
       <img src={jfslogoblack} alt="JFS Logo" className="sliding-logo" />
         <a href="/">Home</a>
         <a href="/collection">Collection</a>
+        <a href="https://www.depop.com/johnsfootballshirts/">Shop</a>
         <a href="https://instagram.com/johnsfootballshirts">Socials</a>
         <div className='igicon' onClick={() => window.location.href = "https://instagram.com/johnsfootballshirts"}>
           <FontAwesomeIcon icon={fabInstagram} color={menuOpen ? 'black' : 'white'} fontSize={'6vh'} />

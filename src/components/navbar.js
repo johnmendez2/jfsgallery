@@ -12,6 +12,7 @@ function Navbar() {
       <div className="nav-options">
         <a href="/">Home</a>
         <a href="/collection">Collection</a>
+        <a href="https://www.depop.com/johnsfootballshirts/">Shop</a>
         <a href="https://instagram.com/johnsfootballshirts">Socials</a>
       </div>
     </div>

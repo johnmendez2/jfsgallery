@@ -7,6 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.scrollable-container {
+  overflow-y: scroll; /* or auto, depending on your preference */
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
